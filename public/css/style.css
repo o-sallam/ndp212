@@ -1,0 +1,147 @@
+/* --- RESET & BASIC SETUP --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #000000;
+    /* Fallback black */
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- BACKGROUND STYLING --- */
+/* This simulates the NDB212 swirling pattern using CSS gradients. 
+   Replace the 'background-image' url below with your actual pattern image. */
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Placeholder pattern mimicking dark swirls */
+    background:
+        radial-gradient(circle at 50% 50%, #2a2a2a 0%, #000000 70%),
+        repeating-linear-gradient(45deg, #111 0px, #111 2px, #000 2px, #000 10px);
+    opacity: 0.8;
+}
+
+/* --- CONTAINER --- */
+.container {
+    width: 100%;
+    max-width: 760px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+/* --- LOGO --- */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+/* Placeholder styling for the logo position */
+.logo-placeholder {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    /* Simulating the gold outline mentioned */
+    text-shadow:
+        -1px -1px 0 #FFD700,
+        1px -1px 0 #FFD700,
+        -1px 1px 0 #FFD700,
+        1px 1px 0 #FFD700;
+    letter-spacing: 2px;
+}
+
+/* Use this class if inserting the actual image:
+.logo-img {
+    max-width: 150px;
+    height: auto;
+}
+*/
+
+/* --- HEADLINES --- */
+h1.main-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+h2.sub-title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #e0e0e0;
+    /* Slightly softer white */
+    margin-bottom: 25px;
+}
+
+/* --- SEPARATOR --- */
+.separator {
+    width: 60px;
+    height: 3px;
+    background-color: #FFD700;
+    /* NDB212 Gold */
+    border-radius: 2px;
+    margin: 0 auto 25px auto;
+}
+
+/* --- DESCRIPTION --- */
+p.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+/* --- CTA BUTTON --- */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD700;
+    /* NDB212 Gold */
+    color: #000000;
+    /* Black text for contrast */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 16px 32px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    /* Subtle gold glow */
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    /* Space between icon and text in RTL */
+    fill: #000000;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDB212 - ترشيحات المباريات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & BASIC SETUP --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #000000; /* Fallback black */
+            color: #FFFFFF;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- BACKGROUND STYLING --- */
+        /* This simulates the NDB212 swirling pattern using CSS gradients. 
+           Replace the 'background-image' url below with your actual pattern image. */
+        .background-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Placeholder pattern mimicking dark swirls */
+            background: 
+                radial-gradient(circle at 50% 50%, #2a2a2a 0%, #000000 70%),
+                repeating-linear-gradient(45deg, #111 0px, #111 2px, #000 2px, #000 10px);
+            opacity: 0.8;
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* --- LOGO --- */
+        .logo-container {
+            margin-bottom: 30px;
+        }
+        
+        /* Placeholder styling for the logo position */
+        .logo-placeholder {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            /* Simulating the gold outline mentioned */
+            text-shadow: 
+                -1px -1px 0 #FFD700,  
+                 1px -1px 0 #FFD700,
+                -1px  1px 0 #FFD700,
+                 1px  1px 0 #FFD700;
+            letter-spacing: 2px;
+        }
+
+        /* Use this class if inserting the actual image:
+        .logo-img {
+            max-width: 150px;
+            height: auto;
+        }
+        */
+
+        /* --- HEADLINES --- */
+        h1.main-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        h2.sub-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #e0e0e0; /* Slightly softer white */
+            margin-bottom: 25px;
+        }
+
+        /* --- SEPARATOR --- */
+        .separator {
+            width: 60px;
+            height: 3px;
+            background-color: #FFD700; /* NDB212 Gold */
+            border-radius: 2px;
+            margin: 0 auto 25px auto;
+        }
+
+        /* --- DESCRIPTION --- */
+        p.description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #f0f0f0;
+            margin-bottom: 25px;
+            max-width: 90%;
+        }
+
+        /* --- CTA BUTTON --- */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFD700; /* NDB212 Gold */
+            color: #000000; /* Black text for contrast */
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 32px;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Subtle gold glow */
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px; /* Space between icon and text in RTL */
+            fill: #000000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-layer"></div>
+
+    <main class="container">
+        <div class="logo-container">
+            <div class="logo-placeholder">NDB212</div>
+        </div>
+
+        <h1 class="main-title">ترشيحات المباريات اليومية</h1>
+
+        <h2 class="sub-title">تحليلات سريعة قبل بداية اللقاءات</h2>
+
+        <div class="separator"></div>
+
+        <p class="description">
+            نقدّم لك تحليلات مبسطة وترشيحات يومية لأهم المباريات. انضم الآن لمتابعة التحديثات أولًا بأول عبر قناة واتساب، بدون تسجيل أو تعقيد.
+        </p>
+
+        <div class="separator"></div>
+
+        <a href="#" class="cta-button">
+            <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c1.09.597 2.072.854 3.203.854h.003c3.182 0 5.768-2.586 5.768-5.766 0-1.545-.601-2.99-1.693-4.082-1.092-1.09-2.536-1.691-4.475-1.959zM12 2C6.486 2 2 6.486 2 12c0 1.838.508 3.559 1.391 5.044L2.001 22l5.122-1.339C8.595 21.465 10.25 22 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm.006 14.5c-2.484 0-4.506-2.022-4.506-4.506 0-2.484 2.022-4.506 4.506-4.506s4.506 2.022 4.506 4.506c0 2.484-2.022 4.506-4.506 4.506z"/>
+                <path d="M17.507 14.307l-.941-.483c-.261-.134-.593-.058-.727.167l-.417.702c-.118.198-.363.265-.561.167-1.428-.707-2.333-1.674-2.986-3.085-.094-.203-.021-.444.18-.549l.711-.37c.23-.119.324-.436.194-.657l-.464-.784c-.139-.235-.441-.309-.672-.165l-.794.496c-.279.174-.43.513-.332.853.491 1.706 2.083 3.639 4.093 4.414.346.133.714.032.932-.212l.617-.692c.176-.197.169-.536-.053-.651z"/>
+            </svg>
+            انضم إلى قناة واتساب الآن
+        </a>
+
+    </main>
+</body>
+</html>
